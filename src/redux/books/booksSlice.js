@@ -70,7 +70,8 @@ export const booksSlice = createSlice({
 			.addCase(update.fulfilled, (state, action) => {
 				const books = state.bookList.map((book) => {
 					if (book.id === +action.payload.id) {
-						book = action.payload
+						return action.payload 
+
 					}
 					return book
 				})
