@@ -40,16 +40,16 @@ const BookList = () => {
 				))} */}
 			{bookList &&
 				bookList.map((item) => (
-					<div key={item.id} class="book">
+					<div key={item.id} className="book">
 						<p>{item.name} - </p>
 						<p>{item.price}€</p>
 						<DeleteOutlined
 							onClick={() => dispatch(deleteBook(item.id))}
-							class="book-button"
+							className="book-button"
 						/>
 						<EditOutlined
 							onClick={() => showModal(item.id)}
-							class="book-button"
+							className="book-button"
 						/>
 					</div>
 				))}
