@@ -45,11 +45,11 @@ const BookList = () => {
 						<p>{item.price}€</p>
 						<DeleteOutlined
 							onClick={() => dispatch(deleteBook(item.id))}
-							class="book-button"
+							className="book-button"
 						/>
 						<EditOutlined
 							onClick={() => showModal(item.id)}
-							class="book-button"
+							className="book-button"
 						/>
 					</div>
 				))}

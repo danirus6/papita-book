@@ -69,12 +69,13 @@ export const booksSlice = createSlice({
 			})
 			.addCase(update.fulfilled, (state, action) => {
 				const books = state.bookList.map((book) => {
-					if (book.id === +action.payload.id) {
-						return action.payload 
-
+					console.log('book', book)
+					if (book.id === +action.payload.book.id) {
+						book = action.payload.book
 					}
 					return book
 				})
+
 				state.bookList = books
 			})
 	},
